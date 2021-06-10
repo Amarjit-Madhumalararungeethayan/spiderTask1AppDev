@@ -8,6 +8,8 @@ import com.example.lorentz.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+
+    //disables back button
     override fun onBackPressed() {
         // super.onBackPressed();
         // Not calling **super**, disables back button in current screen.
@@ -20,12 +22,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //directs user to Lorentz Factor page
         binding.Lorentz.setOnClickListener(){
             val intent = Intent(this, Lorentz::class.java)
             startActivity(intent)
         }
+
+        //directs user to SPI Factor page
         binding.spi.setOnClickListener(){
             val intent = Intent(this, SPI::class.java)
+            startActivity(intent)
+        }
+        binding.button4.setOnClickListener(){
+            val intent = Intent(this, Checker::class.java)
             startActivity(intent)
         }
 

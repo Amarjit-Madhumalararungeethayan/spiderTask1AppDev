@@ -14,10 +14,7 @@ val temp = 1
 
 class SPI : AppCompatActivity() {
 
-    override fun onBackPressed() {
-        // super.onBackPressed();
-        // Not calling **super**, disables back button in current screen.
-    }
+    
     lateinit var binding: ActivitySpiBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
