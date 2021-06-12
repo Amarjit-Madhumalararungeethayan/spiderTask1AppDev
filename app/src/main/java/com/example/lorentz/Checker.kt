@@ -24,6 +24,9 @@ class Checker : AppCompatActivity() {
         binding = ActivityCheckerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.textView6.text = "                      "
+        binding.textView4.text = "         "
+
         binding.button.setOnClickListener() {
             checkFun()
         }
@@ -65,7 +68,9 @@ class Checker : AppCompatActivity() {
             val df = DecimalFormat("#.######")     //rounds it to 5 decimal places
             df.roundingMode = RoundingMode.CEILING
 
-            binding.textView8.text = df.format(res).toDouble().toString()
+            binding.textView6.text = "Calculated Lorentz factor "
+            binding.textView4.text = "Rounded to 3 decimal places"
+            binding.textView8.text = df.format(res).toDouble().toString() //💪🏼
         }
 
 
