@@ -3,6 +3,7 @@ package com.example.lorentz
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lorentz.databinding.ActivitySpiBinding
 import java.math.RoundingMode
@@ -14,13 +15,23 @@ val temp = 1
 
 class SPI : AppCompatActivity() {
 
-    
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+
     lateinit var binding: ActivitySpiBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySpiBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val actionBar: ActionBar? = supportActionBar
+        if (actionBar != null) {
+            actionBar.hide()
+        }
 
         countDown(100000,1000)
 

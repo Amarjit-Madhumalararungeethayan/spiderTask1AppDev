@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import com.example.lorentz.databinding.ActivityCheckerBinding
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -15,8 +16,8 @@ class Checker : AppCompatActivity() {
     lateinit var binding: ActivityCheckerBinding
 
     override fun onBackPressed() {
-        // super.onBackPressed();
-        // Not calling **super**, disables back button in current screen.
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +25,12 @@ class Checker : AppCompatActivity() {
         binding = ActivityCheckerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val actionBar: ActionBar? = supportActionBar
+        if (actionBar != null) {
+            actionBar.hide()
+        }
+
         binding.textView6.text = "                      "
-        binding.textView4.text = "         "
 
         binding.button.setOnClickListener() {
             checkFun()
@@ -69,7 +74,6 @@ class Checker : AppCompatActivity() {
             df.roundingMode = RoundingMode.CEILING
 
             binding.textView6.text = "Calculated Lorentz factor "
-            binding.textView4.text = "Rounded to 3 decimal places"
             binding.textView8.text = df.format(res).toDouble().toString() //💪🏼
         }
 

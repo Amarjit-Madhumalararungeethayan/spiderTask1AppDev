@@ -5,6 +5,7 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.os.*
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lorentz.databinding.ActivityLorentzBinding
 import java.math.RoundingMode
@@ -16,16 +17,21 @@ class Lorentz : AppCompatActivity() {
 
     lateinit var binding: ActivityLorentzBinding
 
-    //disables back button
+    //back button - to go back home
     override fun onBackPressed() {
-        // super.onBackPressed();
-        // Not calling **super**, disables back button in current screen.
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLorentzBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val actionBar: ActionBar? = supportActionBar
+        if (actionBar != null) {
+            actionBar.hide()
+        }
 
         binding.button.setOnClickListener() {
             checkFun()
@@ -65,7 +71,7 @@ class Lorentz : AppCompatActivity() {
             var temp = velo.div(300000000)
             var res = 1 / sqrt(1 - (temp.pow(2)))           //Lorentz Formula
 
-            val df = DecimalFormat("#.###")
+            val df = DecimalFormat("#.######")
             df.roundingMode = RoundingMode.CEILING        //rounds it to 3 decimal places
 
             if (df.format(res).toDouble() == input1) {

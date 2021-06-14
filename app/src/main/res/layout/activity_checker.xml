@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#101010"
+    android:background="@drawable/recbg"
     tools:context=".Checker">
+
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -25,7 +26,7 @@
         android:layout_height="159dp"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="152dp"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,11 +38,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/rounded_white"
-        android:text="  The Lorentz Formula ...  "
-        android:textColor="@color/black"
-        android:textSize="30sp"
+        android:layout_marginTop="145dp"
+        android:fontFamily="monospace"
+        android:text="The Lorentz Formula ..."
+        android:textColor="@color/cpiderBlue"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,9 +51,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="236dp"
-        android:background="@drawable/rounded_white"
+        android:fontFamily="monospace"
         android:text=" Let's Check ... 🙃"
-        android:textColor="@color/black"
+        android:textColor="@color/cpiderBlue"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.135"
@@ -89,11 +90,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
         android:text="Calculate"
-        app:backgroundTint="#469FDA"
+        android:textColor="#020202"
+        app:backgroundTint="@color/cpiderBlue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -101,7 +103,7 @@
         android:id="@+id/imageView4"
         android:layout_width="284dp"
         android:layout_height="125dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="88dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,10 +119,10 @@
         android:layout_marginTop="25dp"
         android:drawableStart="@drawable/input_logo"
         android:drawableLeft="@drawable/input_logo"
-        android:hint="  Velocity ..."
         android:gravity="center"
-        android:textColor="@color/white"
+        android:hint="  Velocity ..."
         android:inputType="numberDecimal"
+        android:textColor="@color/white"
         android:textColorHint="#FA7E7C7C"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -133,38 +135,80 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
-        android:inputType="numberDecimal"
         android:gravity="center_vertical"
+        android:inputType="numberDecimal"
         android:textColor="@color/white"
         android:textColorHint="#FA7E7C7C"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="Rounded to 3 decimal places ..."
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
     <Button
         android:id="@+id/button2"
-        android:layout_width="194dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="215dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
         android:text="Return to Home Screen"
+        android:textColor="#040303"
         android:textSize="10sp"
-        app:backgroundTint="#469FDA"
+        app:backgroundTint="@color/cpiderBlue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="76dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/screenshot_2021_06_14_at_12_21_55_pm" />
+
+    <TextView
+        android:id="@+id/a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="Amarjit"
+        android:textColor="#16e2e3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/a2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="monospace"
+        android:text="and"
+        android:textColor="#16e2e3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/a1" />
+
+    <TextView
+        android:id="@+id/a3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="monospace"
+        android:text="Spider"
+        android:textColor="#16e2e3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/a2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
