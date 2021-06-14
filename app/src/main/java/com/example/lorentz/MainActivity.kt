@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     //disables back button
     override fun onBackPressed() {
-        System.exit(0)
+        finishAffinity()
     }
 
     lateinit var binding: ActivityMainBinding

@@ -121,7 +121,7 @@ class Lorentz : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                binding.abc.setBackgroundResource(R.color.black)
+                binding.abc.setBackgroundResource(R.drawable.recbg)
             }
         }
         countDown.start()

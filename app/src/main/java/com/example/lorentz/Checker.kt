@@ -56,14 +56,14 @@ class Checker : AppCompatActivity() {
             Toast.makeText(this, "Speed cannot be greater than light", Toast.LENGTH_LONG).show()
             val intent = Intent(
                 this,
-                Lorentz::class.java
+                Checker::class.java
             )                          // Toast and restarts activity if the velocity is greater than that of light
             startActivity(intent)
         } else if (velo == 300000000.toDouble()) {
             Toast.makeText(this, "Lorentz Factor Tends to Infinity ♾", Toast.LENGTH_LONG).show()
             val intent = Intent(
                 this,
-                Lorentz::class.java
+                Checker::class.java
             )                          // Toast and restarts activity if the velocity is equal to that of light
             startActivity(intent)
         } else {

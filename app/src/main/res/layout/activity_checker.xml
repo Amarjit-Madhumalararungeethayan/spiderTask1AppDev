@@ -137,7 +137,7 @@
         android:layout_marginTop="24dp"
         android:gravity="center_vertical"
         android:inputType="numberDecimal"
-        android:textColor="@color/white"
+        android:textColor="@color/cpiderBlue"
         android:textColorHint="#FA7E7C7C"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textView6"
@@ -154,10 +154,12 @@
         android:textColor="#040303"
         android:textSize="10sp"
         app:backgroundTint="@color/cpiderBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
