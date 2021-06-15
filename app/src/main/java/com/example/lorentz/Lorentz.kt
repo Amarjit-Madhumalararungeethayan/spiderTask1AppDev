@@ -28,6 +28,7 @@ class Lorentz : AppCompatActivity() {
         binding = ActivityLorentzBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //hides action bar
         val actionBar: ActionBar? = supportActionBar
         if (actionBar != null) {
             actionBar.hide()
@@ -74,19 +75,19 @@ class Lorentz : AppCompatActivity() {
             val df = DecimalFormat("#.######")
             df.roundingMode = RoundingMode.CEILING        //rounds it to 3 decimal places
 
-            if (df.format(res).toDouble() == input1) {
+            if (df.format(res).toDouble() == input1) {          //right answer
                 binding.crt.text = "Well Done 😎"
                 binding.textView10.text = "Correct Answer ->"
                 binding.textView.text = df.format(res).toString()
-                binding.abc.setBackgroundResource(R.color.green)
+                binding.abc.setBackgroundResource(R.color.green)  //green light flashes if right answer
                 countDown1(200,10)
                 successSound()
 
-            } else if(df.format(res).toDouble() != input1){
+            } else if(df.format(res).toDouble() != input1){         //wrong answer
                 binding.crt.text = "Wrong answer 😞"
                 binding.textView10.text = " Correct Answer ->"
                 binding.textView.text = df.format(res).toString()
-                binding.abc.setBackgroundResource(R.color.red)
+                binding.abc.setBackgroundResource(R.color.red)      ////red light flashes if wrong answer
                 countDown1(200,10)
                 failSound()
                 vibrateNow()

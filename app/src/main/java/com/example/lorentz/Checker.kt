@@ -25,6 +25,7 @@ class Checker : AppCompatActivity() {
         binding = ActivityCheckerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Hides action bar
         val actionBar: ActionBar? = supportActionBar
         if (actionBar != null) {
             actionBar.hide()
@@ -32,9 +33,11 @@ class Checker : AppCompatActivity() {
 
         binding.textView6.text = "                      "
 
+        //For calc
         binding.button.setOnClickListener() {
             checkFun()
         }
+        //returns user back to home page
         binding.button2.setOnClickListener(){
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -74,7 +77,7 @@ class Checker : AppCompatActivity() {
             df.roundingMode = RoundingMode.CEILING
 
             binding.textView6.text = "Calculated Lorentz factor "
-            binding.textView8.text = df.format(res).toDouble().toString() //💪🏼
+            binding.textView8.text = df.format(res).toDouble().toString() //💪 displays result
         }
 
 

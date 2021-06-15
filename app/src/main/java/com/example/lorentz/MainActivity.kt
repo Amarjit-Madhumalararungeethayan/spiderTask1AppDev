@@ -11,7 +11,7 @@ import com.example.lorentz.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
 
-    //disables back button
+    //makes back button end all acitivities
     override fun onBackPressed() {
         finishAffinity()
     }
@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.thanks.text = ""
 
+        //easter egg 1 😂
         binding.imageView.setOnClickListener(){
             binding.imageView.animate().apply {
                 duration = 500
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             binding.imageView.setImageResource(R.drawable.screenshot_2021_06_14_at_3_51_47_pm)
         }
 
+        //easter egg 2 😂
         binding.textView11.setOnClickListener(){
             binding.textView11.animate().apply {
                 duration = 500
@@ -41,12 +43,13 @@ class MainActivity : AppCompatActivity() {
             binding.thanks.text = "Thanks for mentoring me Gokul Anna ❤️"
         }
 
+        //removes action bar
         val actionBar: ActionBar? = supportActionBar
         if (actionBar != null) {
             actionBar.hide()
         }
 
-        //directs user to Lorentz Factor page
+        //directs user to Lorentz Practice page
         binding.Lorentz.setOnClickListener(){
             val intent = Intent(this, Lorentz::class.java)
             startActivity(intent)
@@ -57,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SPI::class.java)
             startActivity(intent)
         }
+        //directs user to Lorentz Calculator page
         binding.button4.setOnClickListener(){
             val intent = Intent(this, Checker::class.java)
             startActivity(intent)
